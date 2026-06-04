@@ -61,10 +61,3 @@ O `Super Contador` permite inserir um valor de início, um valor de fim e um pas
 
 - O servidor serve os arquivos estáticos a partir da pasta `public`.
 - O frontend está em `Super contador/public`, portanto abra o projeto a partir dessa pasta ao executar localmente.
-
-## Melhorias possíveis
-
-- Adicionar suporte para contagem decrescente.
-- Melhorar as validações para valores negativos e decimais.
-- Criar testes automatizados para backend e frontend.
-- Adicionar uma interface mais responsiva e acessível.
