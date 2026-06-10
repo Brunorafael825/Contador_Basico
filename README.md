@@ -1,10 +1,10 @@
 # Super Contador
 
-Aplicação web simples para contar números em sequência, com frontend em HTML/CSS/JavaScript e backend leve em Node.js/Express.
+Aplicação web Full Stack para contar números em sequência, com frontend em HTML/CSS/JavaScript e backend em Node.js, Express e SQLite.
 
 ## Descrição
 
-O `Super Contador` permite inserir um valor de início, um valor de fim e um passo para gerar uma sequência numérica. O projeto também inclui um servidor Express para servir os arquivos estáticos do frontend e uma rota de status.
+O `Super Contador` permite inserir um valor de início, um valor de fim e um passo para gerar uma sequência numérica. O projeto agora resolve limitações de regressão e persistência, gravando histórico de contagens em SQLite e recuperando esses dados sempre que a aplicação é carregada.
 
 ## Estrutura do projeto
 
@@ -50,7 +50,14 @@ O `Super Contador` permite inserir um valor de início, um valor de fim e um pas
 - Gera a sequência numérica do `Início` ao `Fim` usando o `Passo` informado.
 - Exibe o resultado com setas e bandeira ao final.
 - Servidor backend com Express e suporte a CORS.
-- Rota de status disponível em `/api/status`.
+- Persistência em banco SQLite para salvar e recuperar histórico de contagens.
+- Registra o histórico de contagens e resolve limitações de regressão e perda de dados entre atualizações.
+
+## Rotas da API
+
+- `POST /contar` — envia os dados de `inicio`, `fim` e `passo`, executa a contagem e salva o resultado no banco de dados.
+- `GET /historico` — retorna o histórico de contagens armazenado no SQLite.
+- `DELETE /:id` — remove um registro de histórico pelo seu `id`.
 
 ## Scripts disponíveis
 
