@@ -19,3 +19,41 @@ footer{
     text-align: center;
     font-style: italic;
 }
+/* Container do histórico */
+#lista-historico {
+    margin-top: 20px;
+}
+
+/* Estilo para cada card de contagem */
+.historico-card {
+    background: white; /* Cor de fundo conforme fonte [1] */
+    border-radius: 10px; /* Bordas arredondadas conforme fonte [1] */
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade [1] */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    transition: transform 0.2s;
+}
+
+.historico-card:hover {
+    transform: scale(1.02); /* Pequeno efeito de destaque ao passar o mouse */
+}
+
+.info-contagem strong {
+    color: #2e86de; /* Um azul para combinar com o tema original [1] */
+}
+
+.btn-excluir {
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    transition: opacity 0.2s;
+}
+
+.btn-excluir:hover {
+    opacity: 0.6;
+}
